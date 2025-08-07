@@ -7,10 +7,11 @@ require('dotenv').config();
 const mongoConnection = require('./config/db')
 mongoConnection().then(()=>{console.log("Database Connected......!!!!")})
 
+//---------------------------------Models---------------------------------
+const User = require('./models/User')
 
-
-
-
+//--------------------------------Validators------------------------------
+const userValidator = require('./validation/userValidator')
 
 
 
