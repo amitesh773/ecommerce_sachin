@@ -30,13 +30,6 @@ const userValidator = Joi.object({
             'string.min': 'Password must be at least 8 characters long',
             'string.empty': 'Password is required'
         }),
-
-    role: Joi.string()
-        .valid('user', 'admin')
-        .default('user')
-        .messages({
-            'any.only': 'Role must be one of user, admin.'
-        })
 });
 
 module.exports = userValidator;
